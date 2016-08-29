@@ -24,6 +24,15 @@ func init(){
     }
 }
 
+func GetAllStock()[]model.Stock{
+    list := make([]model.Stock, 0)
+    err := engine.Find(&list)
+    if err!=nil{
+        log.Println("xorm GetAllStock falie.",err)
+    }
+    return list
+}
+
 func SaveStockCode(list []model.Stock){
     session := engine.NewSession()
     defer session.Close()

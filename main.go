@@ -8,6 +8,10 @@ func main() {
 
 
 
+a:=Dal.GetAllStock()
+    for _,v:=range a {
+        fmt.Println(v)
+    }
 
 
 
