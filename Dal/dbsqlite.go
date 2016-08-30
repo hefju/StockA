@@ -18,10 +18,15 @@ func init(){
     }
     engine.SetMapper(core.SameMapper{})
     engine.ShowSQL(true)
-    err = engine.Sync2(new(model.Stock))
-    if err!=nil{
-        log.Fatal("xorm sync falie.",err)
-    }
+
+	//更新数据库
+//    err = engine.Sync2(new(model.Stock))
+//    if err!=nil{
+//        log.Fatal("xorm sync falie.",err)
+//    }
+}
+func UpdateTable(){
+
 }
 
 func GetAllStock()[]model.Stock{
